@@ -1,7 +1,7 @@
 ###   Global vars   ###
 export g_user="jwalker"
-g_homeDir="$HOME"
-g_toolsDir="$g_homeDir/tools"
+export g_homeDir="$HOME"
+export g_toolsDir="$g_homeDir/LinuxTools"
 
 ###   Setup VIM   ###
 g_vimrc="$g_homeDir/tools/.vimrc"
@@ -59,7 +59,7 @@ TMUX()
 }
 
 ###   Setup EMACS   ###
-g_emacscfg="$g_homeDir/tools/emacs.el"
+g_emacscfg="$g_toolsDir/emacs.el"
 if test -e "$g_emacscfg"; then
     alias emacs="emacs -nw -l $g_emacscfg"
     echo "Custom emacs set"
@@ -89,4 +89,8 @@ echo
 
 alias tar="tar -xvf"
 echo tar = tar -xvf
+echo
+
+alias ShowEnv="printenv | less"
+echo "ShowEnv = printenv | less"
 echo

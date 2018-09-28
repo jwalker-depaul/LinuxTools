@@ -3,13 +3,20 @@ export g_user="jwalker"
 export g_homeDir="$HOME"
 export g_toolsDir="$g_homeDir/LinuxTools"
 
+###   Setup Tools   ###
+# Run this method to install the plugins that these tools use :)
+SetupTools()
+{
+	sudo yum -y install tmux emacs
+}
+
 ###   Setup VIM   ###
-g_vimrc="$g_homeDir/tools/.vimrc"
-if test -e $g_homeDir/tools/.vimrc; then
+g_vimrc="$g_toolsDir/.vimrc"
+if test -e $g_toolsDir/.vimrc; then
     export g_vimrc
 else
     echo "warning:"
-    echo -e "\t$g_homeDir/tools/.vimrc does not exist"
+    echo -e "\t$g_toolsDir/.vimrc does not exist"
 	echo
 fi
 

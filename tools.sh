@@ -5,9 +5,14 @@ export g_toolsDir="$g_homeDir/LinuxTools"
 
 ###   Setup Tools   ###
 # Run this method to install the plugins that these tools use :)
-SetupTools()
+SetupCentOSTools()
 {
 	sudo yum -y install tmux emacs
+}
+
+SetupUbuntuTools()
+{
+	sudo apt-get -y install tmux emacs
 }
 
 ###   Setup VIM   ###
@@ -80,8 +85,8 @@ fi
 ###   Other Helpful Tools   ###
 la()
 {
-    ls -alh --color=auto $1
-    pwd
+	ls -alh --color=auto $1
+	pwd
 }
 echo la = ls -alh --color=auto and pwd
 echo

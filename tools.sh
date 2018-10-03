@@ -12,7 +12,7 @@ SetupCentOSTools()
 
 SetupUbuntuTools()
 {
-	sudo apt-get -y install tmux emacs
+	sudo apt -y install tmux emacs
 }
 
 ###   Setup VIM   ###
@@ -82,13 +82,14 @@ else
     echo
 fi
 
+
 ###   Other Helpful Tools   ###
 la()
 {
 	ls -alh --color=auto $1
 	pwd
 }
-echo la = ls -alh --color=auto and pwd
+echo "la = ls -alh --color=auto and pwd"
 echo
 
 cd()
@@ -96,13 +97,21 @@ cd()
     builtin cd $*
     pwd
 }
-echo cd = cd and pwd
+echo "cd = cd and pwd"
 echo
 
 alias tar="tar -xvf"
-echo tar = tar -xvf
+echo "tar = tar -xvf"
 echo
 
 alias ShowEnv="printenv | less"
 echo "ShowEnv = printenv | less"
+echo
+
+alias rpmi="sudo rpm -ivh"
+echo "rpmi = sudo rpm -ivh"
+echo
+
+alias rpme="sudo rpm -e"
+echo "rpme = sudo rpm -e"
 echo

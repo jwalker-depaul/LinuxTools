@@ -24,6 +24,7 @@ I've found the following links pretty helpful during some of my endeavours
 
 SSH login without password: http://www.linuxproblem.org/art_9.html
 Sudo without password: https://www.tecmint.com/run-sudo-command-without-password-linux/
+Git change remote: https://help.github.com/articles/changing-a-remote-s-url/
 
 # Contact
 For questions/concerns/updates, please reach out to Joseph Walker:

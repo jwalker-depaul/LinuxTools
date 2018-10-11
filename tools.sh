@@ -82,6 +82,11 @@ else
     echo
 fi
 
+CleanEmacs()
+{
+	find . -iname "*~" | xargs rm
+	find . -iname "*#" | xargs rm
+}
 
 ###   Other Helpful Tools   ###
 la()

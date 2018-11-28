@@ -105,18 +105,28 @@ cd()
 echo "cd = cd and pwd"
 echo
 
-alias tar="tar -xvf"
-echo "tar = tar -xvf"
-echo
-
 alias ShowEnv="printenv | less"
 echo "ShowEnv = printenv | less"
 echo
 
 alias rpmi="sudo rpm -ivh"
-echo "rpmi = sudo rpm -ivh"
+echo "rpmi = install rpm"
 echo
 
 alias rpme="sudo rpm -e"
-echo "rpme = sudo rpm -e"
+echo "rpme = uninstall rpm"
 echo
+
+if [ -z "$JWTOOLS_ENABLED" ] ; then
+    TM=$( echo -e '\u2122')
+
+    # \W is the current folder
+    # \u is the user
+    # \h is the server
+    #export PS1="[jwTools$TM \h \W]$ "
+
+	# With color
+	export PS1="[\e[0;36mjwTools$TM\e[m \e[0;35m\h\e[m \e[0;31m\W\e[m]$ "
+fi
+
+JWTOOLS_ENABLED=117;

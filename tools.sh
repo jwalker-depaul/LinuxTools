@@ -126,7 +126,17 @@ if [ -z "$JWTOOLS_ENABLED" ] ; then
     #export PS1="[jwTools$TM \h \W]$ "
 
 	# With color
-	export PS1="[\e[0;36mjwTools$TM\e[m \e[0;35m\h\e[m \e[0;31m\W\e[m]$ "
+	END_COLOR='\[\e[m\]'
+	COLOR_WHITE='\[\e[0m\]'
+	COLOR_CYAN='\[\e[0;36m\]'
+	COLOR_PURPLE='\[\e[0;35m\]'
+	COLOR_RED='\[\e[0;31m\]'
+	
+	# Too much spacing
+	#export PS1="[$COLOR_CYAN jwTools$TM $END_COLOR $COLOR_PURPLE \h $END_COLOR $COLOR_RED \W $END_COLOR]$ "
+	
+	# Correct spacing
+	export PS1="[\[\e[0;36m\]jwTools$TM\[\e[m\] \[\e[0;35m\]\h\[\e[m\] \[\e[0;31m\]\W\[\e[m\]]$ "
 fi
 
 JWTOOLS_ENABLED=117;
